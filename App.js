@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// App.js
 
-export default function App() {
+import 'react-native-gesture-handler';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { AppProvider } from './src/context/AppContext';
+import HomeScreen from './src/components/HomeScreen';
+import SendMoneyScreen from './src/components/SendMoneyScreen';
+import RecipientsScreen from './src/components/RecipientsScreen';
+import TransactionHistoryScreen from './src/components/TransactionHistoryScreen';
+import ConfirmationScreen from './src/components/ConfirmationScreen';
+
+const Stack = createNativeStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AppProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="SendMoney" component={SendMoneyScreen} />
+          <Stack.Screen name="Recipients" component={RecipientsScreen} />
+          <Stack.Screen name="TransactionHistory" component={TransactionHistoryScreen} />
+          <Stack.Screen name="Confirmation" component={ConfirmationScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </AppProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
