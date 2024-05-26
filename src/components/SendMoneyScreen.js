@@ -1,4 +1,14 @@
-// src/components/SendMoneyScreen.js
+/*
+This component defines the SendMoneyScreen, which allows the user to enter the amount 
+of money to send. It features an input field for entering the amount and a button to 
+navigate to the next screen for selecting recipients. The screen is styled with a clean 
+background and centered layout.
+
+
+Components:
+- AppContext: Used to access the setAmount function from the context.
+
+*/
 
 import React, { useContext } from 'react';
 import { View, Text, TouchableOpacity, TextInput, StyleSheet } from 'react-native';

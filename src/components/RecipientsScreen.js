@@ -1,4 +1,15 @@
-// src/components/RecipientsScreen.js
+/*
+  RecipientsScreen Component:
+  This component allows users to select recipients from a list and confirm their selection in a modal pop-up.
+
+  Challenges:
+  1. State Management: Managing state variables such as search, filteredRecipients, and selectedRecipient.
+  2. Search Functionality: Implementing the search functionality to filter recipients based on user input.
+  3. Modal Implementation: Creating a modal pop-up for confirming recipient selection.
+
+  
+
+*/
 
 import React, { useContext, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, TextInput, StyleSheet, Modal } from 'react-native';

@@ -1,5 +1,25 @@
-// src/components/TransactionHistoryScreen.js
 
+/*
+This component defines the TransactionHistoryScreen, which displays a list of past transactions. 
+Each transaction can be clicked to show detailed information in a modal. The screen is styled 
+to be visually appealing and easy to navigate.
+
+State and Methods:
+- isModalVisible: Controls the visibility of the modal.
+- selectedTransaction: Holds the transaction currently selected to display in the modal.
+- toggleModal: Toggles the modal visibility and sets the selected transaction.
+- renderItem: Renders each transaction as a card that can be clicked to open the modal.
+
+Components:
+- AppContext: Used to access the transactions from the context.
+- FlatList: Used to render the list of transactions.
+- Modal: Displays transaction details in a modal when a transaction is selected.
+
+
+Challenges:
+- Ensuring the modal displays correct and complete transaction details.
+- Managing state for the selected transaction and modal visibility.
+*/
 import React, { useContext, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import { AppContext } from '../context/AppContext';

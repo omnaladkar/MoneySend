@@ -1,8 +1,23 @@
-// src/components/HomeScreen.js
 
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+
+/*
+This component defines the HomeScreen, which acts as the main screen of the app. 
+It features a welcome message and two buttons for navigating to the "Send Money" 
+and "Transaction History" screens. The screen is styled with a clean white background 
+and centered layout. The buttons are styled to be modern and attractive, with blue 
+backgrounds and white text. Icons are also included to enhance the visual appeal.
+
+Props:
+- navigation: Used to navigate between different screens.
+
+State and Methods:
+- None in this component, as it mainly handles navigation.
+
+
+*/
 
 const HomeScreen = ({ navigation }) => {
   return (

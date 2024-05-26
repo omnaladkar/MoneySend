@@ -1,4 +1,12 @@
-// src/components/ConfirmationScreen.js
+// ConfirmationScreen Component:
+// This component displays a confirmation screen for a transaction and includes a modal for confirming the transaction
+// and a fullscreen animation upon successful confirmation.
+
+// Challenges:
+// 1. Integrating a modal for confirmation with proper functionality.
+// 2. Implementing a fullscreen animation upon successful confirmation.
+// 3. Managing state for modal visibility and animation visibility.
+
 
 import React, { useContext, useRef, useState } from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
